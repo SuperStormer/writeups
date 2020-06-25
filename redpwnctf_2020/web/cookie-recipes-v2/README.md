@@ -18,4 +18,4 @@ Final Exploit:
 </script>
 ```
 
-Flag: flag{n0_m0r3_gu3551ng}
+Flag: `flag{n0_m0r3_gu3551ng}`

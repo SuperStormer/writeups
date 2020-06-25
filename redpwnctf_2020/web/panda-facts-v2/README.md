@@ -28,4 +28,4 @@ We can see that the token is generated with AES using the CBC mode. This is vuln
 
 Final Exploit: [solve.py](./solve.py)
 
-Flag: flag{54v3_th3_b335_1n5t34d}
+Flag: `flag{54v3_th3_b335_1n5t34d}`

