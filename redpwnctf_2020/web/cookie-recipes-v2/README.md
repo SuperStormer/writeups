@@ -1,4 +1,4 @@
-# cookie-recipes-v2 (51 solves)
+# cookie-recipes-v2
 
 Source: [index.js](./index.js)
 

@@ -1,4 +1,4 @@
-# inspector-general (1300 solves)
+# inspector-general
 
 View source and Ctrl-F "flag".
 

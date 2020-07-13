@@ -1,4 +1,4 @@
-# tux-fanpage (135 solves)
+# tux-fanpage
 
 Source: [index.js](./index.js)
 

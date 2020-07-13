@@ -1,4 +1,4 @@
-# uglybash (407 solves)
+# uglybash
 
 Source: [cmd.sh](./cmd.sh)
 

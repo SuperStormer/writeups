@@ -1,4 +1,4 @@
-# CaaSiNO (305 solves)
+# CaaSiNO
 
 Source: [calculator.js](./calculator.js)
 

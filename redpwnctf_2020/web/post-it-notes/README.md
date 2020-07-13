@@ -1,4 +1,4 @@
-# post-it-notes (82 solves)
+# post-it-notes
 
 Source: [source/](./source)
 

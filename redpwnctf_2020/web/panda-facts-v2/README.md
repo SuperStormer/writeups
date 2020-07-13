@@ -1,4 +1,4 @@
-# panda-facts-v2 (42 solves)
+# panda-facts-v2
 
 Source: [index.js](./index.js)
 

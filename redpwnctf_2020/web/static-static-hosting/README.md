@@ -1,4 +1,4 @@
-# static-static-hosting (222 solves)
+# static-static-hosting
 
 Source: [script.js](./script.js)
 

@@ -1,4 +1,4 @@
-# albatross (11 solves)
+# albatross
 
 Source: [albatross.py](./albatross.py)
 

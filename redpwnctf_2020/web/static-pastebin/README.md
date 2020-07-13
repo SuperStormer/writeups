@@ -1,4 +1,4 @@
-# static-pastebin (374 solves)
+# static-pastebin
 
 Source: [script.js](./script.js)
 

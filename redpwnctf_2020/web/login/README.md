@@ -1,4 +1,4 @@
-# login (1007 solves)
+# login
 
 Source: [index.js](index.js)
 
