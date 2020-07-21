@@ -1,0 +1,80 @@
+<html>
+	<head>
+	<script src="/static/cookie.js"></script>
+	<script src="/static/jquery.min.js"></script>
+	</head>
+<body>
+
+<!-- im so sorry -->
+<div id="main">
+
+    <pre id="output" ></pre>
+
+	<br><br>
+	<div id="buttons">
+		<button type="button" id="status">Network Status</button> 
+		<div>
+			<button type="button" id="flag" style="margin-left: 300px">Flag</button> 
+		</div>
+	</div>
+
+		
+
+		
+
+</div>
+
+<script>
+
+async function print(m, ms) {
+	$("#output").append("\n");
+	for (var i=0; i < m.length; i++)
+	{
+		var sel = $("#output");
+		sel.append(m[i]);
+		await sleep(ms);
+	}
+	$("#output").append("\n");
+}
+
+var msg1 = "Welcome to the Nook Stop, a magical multimedia terminal from Nook Inc.\nPlease select one of the following services:\n1) Network status\n2) Flag";
+var msg2 = "Ah, sorry!! Our banking systems run on FORTRAN and they're a bit \non the slow side today.............................................\nyou know how this game's netcode can be sometimes, ahahahahaha!\nAlthought, come to think of it, they did say they were rolling out \nsome kind of new system the other day.......anyway, seems like that flag button isn't working right now."
+
+$(document).ready(function(){
+
+	$("#flag").click(function(){
+		console.log("TODO: シークレット_バックエンド_サービスを可能にする");
+		document.cookie = "clicked_flag_button=true";
+		location.reload();
+	});
+
+	f = $("#flag");
+
+	f.mousemove(function(){
+		var r = Math.random()*100;
+		if (r < 25)
+			f.css("margin-left", "+=100px");
+		else if (r >= 25 && r < 50)
+			f.css("margin-left", "-=30px");
+		else if (r >= 50 && r < 75)
+			f.css("margin-top", "+=50px");
+		else if (r >= 75 && r < 97)
+			f.css("margin-top", "-=50px");
+		else
+			f.remove();
+	});
+
+
+	$("#status").click(function(){
+		print(msg2,100);
+	});
+
+	print(msg1,10);
+});
+
+</script>
+
+
+
+</body>
+</html>
