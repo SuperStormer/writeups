@@ -1,4 +1,4 @@
-from utils.ctf.rev_shell import *
+#from utils.ctf.rev_shell import *
 import requests
 import io
 
