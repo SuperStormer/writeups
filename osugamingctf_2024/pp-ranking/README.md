@@ -13,4 +13,4 @@ SliderMultiplier:1.65
 SliderTickRate:1
 ```
 
-Now all that needs to be done is modifying the beatmap hash of the replay file to match the updated map using osrparse (see [`./fix_hash.py`]) and we can submit for the flag (see [`./solve.py`]).
+Now all that needs to be done is modifying the beatmap hash of the replay file to match the updated map using osrparse (see [`fix_hash.py`](./fix_hash.py)) and we can submit for the flag (see [`solve.py`](./solve.py)).
