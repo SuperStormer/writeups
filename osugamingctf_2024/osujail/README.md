@@ -3,7 +3,7 @@
 
 The idea is to create a lambda function and then update its code object so that it runs your standard pyjail payload:
 `().__class__.mro()[1].__subclasses__()[133].__init__.__globals__['system']('sh')`
-(subclass 133 is `os.wrap_close`)
+(subclass 133 is `os._wrap_close`)
 
 Let's look at the code object that we need to replicate:
 
