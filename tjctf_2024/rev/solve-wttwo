@@ -1,0 +1,8 @@
+start 
+b *main+433
+commands
+silent
+printf "%c", $al
+j *main+443
+end
+c

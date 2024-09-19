@@ -1,0 +1,478 @@
+out1
+  1           0 RESUME                   0
+
+  2           2 NOP
+
+  3           4 LOAD_CONST               1 (0)
+              6 LOAD_CONST               0 (None)
+              8 IMPORT_NAME              0 (sudokum)
+             10 STORE_FAST               0
+
+  4          12 LOAD_CONST               1 (0)
+             14 LOAD_CONST               2 (('long_to_bytes', 'bytes_to_long'))
+             16 IMPORT_NAME              1 (Crypto.Util.number)
+             18 IMPORT_FROM              2 (long_to_bytes)
+             20 STORE_FAST               1
+             22 IMPORT_FROM              3 (bytes_to_long)
+             24 STORE_FAST               2
+             26 POP_TOP
+             28 LOAD_CONST               0 (None)
+             30 RETURN_VALUE
+        >>   32 PUSH_EXC_INFO
+
+  5          34 POP_TOP
+
+  6          36 LOAD_GLOBAL              9 (NULL + print)
+             48 LOAD_CONST               3 ('Woah woah woah, are you trying to reverse me?')
+             50 PRECALL                  1
+             54 CALL                     1
+             64 POP_TOP
+
+  7          66 LOAD_GLOBAL             11 (NULL + __import__)
+             78 LOAD_CONST               4 ('os')
+             80 PRECALL                  1
+             84 CALL                     1
+             94 LOAD_METHOD              6 (_exit)
+            116 LOAD_CONST               5 (1)
+            118 PRECALL                  1
+            122 CALL                     1
+            132 POP_TOP
+            134 POP_EXCEPT
+            136 LOAD_CONST               0 (None)
+            138 RETURN_VALUE
+        >>  140 COPY                     3
+            142 POP_EXCEPT
+            144 RERAISE                  1
+ExceptionTable:
+  4 to 26 -> 32 [0]
+  32 to 132 -> 140 [1] lasti
+out2
+  3           0 RESUME                   0
+
+  6           2 LOAD_CONST               1 (0)
+              4 LOAD_CONST               0 (None)
+              6 IMPORT_NAME              0 (sudokum)
+              8 STORE_FAST               0 (sudokum)
+
+  7          10 NOP
+
+  8     >>   12 LOAD_FAST                0 (sudokum)
+             14 LOAD_METHOD              1 (generate)
+             36 LOAD_CONST               3 (0.56)
+             38 KW_NAMES                 4
+             40 PRECALL                  1
+             44 CALL                     1
+             54 STORE_GLOBAL             2 (dirg)
+
+ 10          56 BUILD_LIST               0
+             58 STORE_FAST               1
+
+ 11          60 LOAD_GLOBAL              7 (NULL + range)
+             72 LOAD_CONST               5 (10)
+             74 PRECALL                  1
+             78 CALL                     1
+             88 GET_ITER
+        >>   90 FOR_ITER                53 (to 198)
+             92 STORE_FAST               2
+
+ 12          94 LOAD_FAST                1
+             96 LOAD_METHOD              4 (append)
+            118 LOAD_FAST                0 (sudokum)
+            120 LOAD_METHOD              5 (solve)
+            142 LOAD_GLOBAL              4 (dirg)
+            154 PRECALL                  1
+            158 CALL                     1
+            168 LOAD_CONST               6 (1)
+            170 BINARY_SUBSCR
+            180 PRECALL                  1
+            184 CALL                     1
+            194 POP_TOP
+            196 JUMP_BACKWARD           54 (to 90)
+
+ 14     >>  198 BUILD_LIST               0
+            200 STORE_FAST               3
+
+ 15         202 LOAD_FAST                1
+            204 GET_ITER
+        >>  206 FOR_ITER                33 (to 274)
+            208 STORE_FAST               4
+
+ 16         210 LOAD_FAST                3
+            212 LOAD_METHOD              4 (append)
+            234 LOAD_FAST                4
+            236 LOAD_FAST                1
+            238 LOAD_CONST               1 (0)
+            240 BINARY_SUBSCR
+            250 COMPARE_OP               2 (==)
+            256 PRECALL                  1
+            260 CALL                     1
+            270 POP_TOP
+            272 JUMP_BACKWARD           34 (to 206)
+
+ 17     >>  274 LOAD_GLOBAL             13 (NULL + all)
+            286 LOAD_FAST                3
+            288 PRECALL                  1
+            292 CALL                     1
+            302 POP_JUMP_FORWARD_IF_FALSE    10 (to 324)
+
+ 18         304 LOAD_FAST                1
+            306 LOAD_CONST               1 (0)
+            308 BINARY_SUBSCR
+            318 STORE_GLOBAL             7 (plus)
+
+ 19         320 LOAD_CONST               0 (None)
+            322 RETURN_VALUE
+
+  7     >>  324 JUMP_BACKWARD          157 (to 12)
+out3
+          0 BUILD_MAP              110
+          2 LOAD_GLOBAL             40
+         14 LOAD_ATTR_ADAPTIVE      46
+         24 LOAD_GLOBAL             40
+         36 LOAD_ATTR_MODULE        41
+         46 MATCH_SEQUENCE
+         48 BUILD_MAP              114
+         50 BUILD_LIST              93
+         52 LOAD_ATTR_MODULE        41
+out4
+  1           0 RESUME                   0
+
+  3           2 LOAD_CONST               1 (0)
+              4 LOAD_CONST               2 (('bytes_to_long',))
+              6 IMPORT_NAME              0 (Crypto.Util.number)
+              8 IMPORT_FROM              1 (bytes_to_long)
+             10 STORE_FAST               0 (bytes_to_long)
+             12 POP_TOP
+
+  4          14 LOAD_CONST               1 (0)
+             16 LOAD_CONST               3 (('b64decode',))
+             18 IMPORT_NAME              2 (base64)
+             20 IMPORT_FROM              3 (b64decode)
+             22 STORE_FAST               1 (b64decode)
+             24 POP_TOP
+
+  5          26 NOP
+
+  6          28 LOAD_GLOBAL              9 (NULL + input)
+             40 LOAD_CONST               4 ('> ')
+             42 PRECALL                  1
+             46 CALL                     1
+             56 STORE_FAST               2
+
+  7          58 LOAD_GLOBAL             11 (NULL + str)
+             70 PUSH_NULL
+             72 LOAD_FAST                0 (bytes_to_long)
+             74 PUSH_NULL
+             76 LOAD_FAST                1 (b64decode)
+             78 LOAD_FAST                2
+             80 PRECALL                  1
+             84 CALL                     1
+             94 PRECALL                  1
+             98 CALL                     1
+            108 PRECALL                  1
+            112 CALL                     1
+            122 LOAD_METHOD              6 (zfill)
+            144 LOAD_CONST               5 (81)
+            146 PRECALL                  1
+            150 CALL                     1
+            160 STORE_FAST               2
+            162 BUILD_LIST               0
+            164 STORE_GLOBAL             7 (add)
+
+ 10         166 LOAD_GLOBAL             17 (NULL + range)
+            178 LOAD_CONST               1 (0)
+            180 LOAD_CONST               5 (81)
+            182 LOAD_CONST               6 (9)
+            184 PRECALL                  3
+            188 CALL                     3
+            198 GET_ITER
+        >>  200 FOR_ITER                91 (to 384)
+            202 STORE_FAST               3
+
+ 12         204 BUILD_LIST               0
+            206 STORE_FAST               4
+            208 LOAD_GLOBAL             17 (NULL + range)
+            220 LOAD_CONST               6 (9)
+            222 PRECALL                  1
+            226 CALL                     1
+            236 GET_ITER
+        >>  238 FOR_ITER                45 (to 330)
+            240 STORE_FAST               5
+            242 LOAD_FAST                4
+            244 LOAD_METHOD              9 (append)
+            266 LOAD_GLOBAL             21 (NULL + int)
+            278 LOAD_FAST                2
+            280 LOAD_FAST                3
+            282 LOAD_FAST                5
+            284 BINARY_OP                0 (+)
+            288 BINARY_SUBSCR
+            298 PRECALL                  1
+            302 CALL                     1
+            312 PRECALL                  1
+            316 CALL                     1
+            326 POP_TOP
+            328 JUMP_BACKWARD           46 (to 238)
+        >>  330 LOAD_GLOBAL             14 (add)
+            342 LOAD_METHOD              9 (append)
+            364 LOAD_FAST                4
+            366 PRECALL                  1
+            370 CALL                     1
+            380 POP_TOP
+            382 JUMP_BACKWARD           92 (to 200)
+
+ 17     >>  384 LOAD_CONST               0 (None)
+            386 RETURN_VALUE
+        >>  388 PUSH_EXC_INFO
+            390 POP_TOP
+            392 LOAD_GLOBAL             23 (NULL + print)
+            404 LOAD_CONST               7 ('bad')
+            406 PRECALL                  1
+            410 CALL                     1
+            420 POP_TOP
+            422 LOAD_GLOBAL             25 (NULL + __import__)
+            434 LOAD_CONST               8 ('os')
+            436 PRECALL                  1
+            440 CALL                     1
+            450 LOAD_METHOD             13 (_exit)
+            472 LOAD_CONST               9 (1)
+            474 PRECALL                  1
+            478 CALL                     1
+            488 POP_TOP
+            490 POP_EXCEPT
+            492 LOAD_CONST               0 (None)
+            494 RETURN_VALUE
+        >>  496 COPY                     3
+            498 POP_EXCEPT
+            500 RERAISE                  1
+ExceptionTable:
+  28 to 382 -> 388 [0]
+  388 to 488 -> 496 [1] lasti
+out5
+  1           0 RESUME                   0
+
+  3           2 LOAD_CONST               1 (0)
+              4 LOAD_CONST               2 (('bytes_to_long',))
+              6 IMPORT_NAME              0 (Crypto.Util.number)
+              8 IMPORT_FROM              1 (bytes_to_long)
+             10 STORE_FAST               0 (bytes_to_long)
+             12 POP_TOP
+
+  4          14 LOAD_CONST               1 (0)
+             16 LOAD_CONST               3 (('b64decode',))
+             18 IMPORT_NAME              2 (base64)
+             20 IMPORT_FROM              3 (b64decode)
+             22 STORE_FAST               1 (b64decode)
+             24 POP_TOP
+
+  5          26 NOP
+
+  6          28 LOAD_GLOBAL              9 (NULL + input)
+             40 LOAD_CONST               4 ('> ')
+             42 PRECALL                  1
+             46 CALL                     1
+             56 STORE_FAST               2
+
+  7          58 LOAD_GLOBAL             11 (NULL + str)
+             70 PUSH_NULL
+             72 LOAD_FAST                0 (bytes_to_long)
+             74 PUSH_NULL
+             76 LOAD_FAST                1 (b64decode)
+             78 LOAD_FAST                2
+             80 PRECALL                  1
+             84 CALL                     1
+             94 PRECALL                  1
+             98 CALL                     1
+            108 PRECALL                  1
+            112 CALL                     1
+            122 LOAD_METHOD              6 (zfill)
+            144 LOAD_CONST               5 (81)
+            146 PRECALL                  1
+            150 CALL                     1
+            160 STORE_FAST               2
+            162 BUILD_LIST               0
+            164 STORE_GLOBAL             7 (add)
+
+ 10         166 LOAD_GLOBAL             17 (NULL + range)
+            178 LOAD_CONST               1 (0)
+            180 LOAD_CONST               5 (81)
+            182 LOAD_CONST               6 (9)
+            184 PRECALL                  3
+            188 CALL                     3
+            198 GET_ITER
+        >>  200 FOR_ITER                91 (to 384)
+            202 STORE_FAST               3
+
+ 12         204 BUILD_LIST               0
+            206 STORE_FAST               4
+            208 LOAD_GLOBAL             17 (NULL + range)
+            220 LOAD_CONST               6 (9)
+            222 PRECALL                  1
+            226 CALL                     1
+            236 GET_ITER
+        >>  238 FOR_ITER                45 (to 330)
+            240 STORE_FAST               5
+            242 LOAD_FAST                4
+            244 LOAD_METHOD              9 (append)
+            266 LOAD_GLOBAL             21 (NULL + int)
+            278 LOAD_FAST                2
+            280 LOAD_FAST                3
+            282 LOAD_FAST                5
+            284 BINARY_OP                0 (+)
+            288 BINARY_SUBSCR
+            298 PRECALL                  1
+            302 CALL                     1
+            312 PRECALL                  1
+            316 CALL                     1
+            326 POP_TOP
+            328 JUMP_BACKWARD           46 (to 238)
+        >>  330 LOAD_GLOBAL             14 (add)
+            342 LOAD_METHOD              9 (append)
+            364 LOAD_FAST                4
+            366 PRECALL                  1
+            370 CALL                     1
+            380 POP_TOP
+            382 JUMP_BACKWARD           92 (to 200)
+
+ 17     >>  384 LOAD_CONST               0 (None)
+            386 RETURN_VALUE
+        >>  388 PUSH_EXC_INFO
+            390 POP_TOP
+            392 LOAD_GLOBAL             23 (NULL + print)
+            404 LOAD_CONST               7 ('bad')
+            406 PRECALL                  1
+            410 CALL                     1
+            420 POP_TOP
+            422 LOAD_GLOBAL             25 (NULL + __import__)
+            434 LOAD_CONST               8 ('os')
+            436 PRECALL                  1
+            440 CALL                     1
+            450 LOAD_METHOD             13 (_exit)
+            472 LOAD_CONST               9 (1)
+            474 PRECALL                  1
+            478 CALL                     1
+            488 POP_TOP
+            490 POP_EXCEPT
+            492 LOAD_CONST               0 (None)
+            494 RETURN_VALUE
+        >>  496 COPY                     3
+            498 POP_EXCEPT
+            500 RERAISE                  1
+ExceptionTable:
+  28 to 382 -> 388 [0]
+  388 to 488 -> 496 [1] lasti
+out6
+  1           0 RESUME                   0
+
+  2           2 NOP
+
+  3           4 LOAD_GLOBAL              1 (NULL + open)
+             16 LOAD_CONST               1 ('flag.txt')
+             18 PRECALL                  1
+             22 CALL                     1
+             32 LOAD_METHOD              1 (read)
+             54 PRECALL                  0
+             58 CALL                     0
+             68 LOAD_METHOD              2 (strip)
+             90 PRECALL                  0
+             94 CALL                     0
+            104 STORE_FAST               0
+
+  4         106 LOAD_GLOBAL              7 (NULL + print)
+            118 LOAD_CONST               2 ('Good job! Here is your flag:')
+            120 PRECALL                  1
+            124 CALL                     1
+            134 POP_TOP
+
+  5         136 LOAD_GLOBAL              7 (NULL + print)
+            148 LOAD_FAST                0
+            150 PRECALL                  1
+            154 CALL                     1
+            164 POP_TOP
+            166 LOAD_CONST               0 (None)
+            168 RETURN_VALUE
+        >>  170 PUSH_EXC_INFO
+
+  6         172 POP_TOP
+
+  7         174 LOAD_GLOBAL              7 (NULL + print)
+            186 LOAD_CONST               3 ('Woah woah woah, are you trying to reverse me?')
+            188 PRECALL                  1
+            192 CALL                     1
+            202 POP_TOP
+
+  8         204 LOAD_GLOBAL              9 (NULL + __import__)
+            216 LOAD_CONST               4 ('os')
+            218 PRECALL                  1
+            222 CALL                     1
+            232 LOAD_METHOD              5 (_exit)
+            254 LOAD_CONST               5 (1)
+            256 PRECALL                  1
+            260 CALL                     1
+            270 POP_TOP
+            272 POP_EXCEPT
+            274 LOAD_CONST               0 (None)
+            276 RETURN_VALUE
+        >>  278 COPY                     3
+            280 POP_EXCEPT
+            282 RERAISE                  1
+ExceptionTable:
+  4 to 164 -> 170 [0]
+  170 to 270 -> 278 [1] lasti
+out7
+  1           0 RESUME                   0
+
+  2           2 NOP
+
+  3           4 LOAD_GLOBAL              1 (NULL + open)
+             16 LOAD_CONST               1 ('flag.txt')
+             18 PRECALL                  1
+             22 CALL                     1
+             32 LOAD_METHOD              1 (read)
+             54 PRECALL                  0
+             58 CALL                     0
+             68 LOAD_METHOD              2 (strip)
+             90 PRECALL                  0
+             94 CALL                     0
+            104 STORE_FAST               0
+
+  4         106 LOAD_GLOBAL              7 (NULL + print)
+            118 LOAD_CONST               2 ('Good job! Here is your flag:')
+            120 PRECALL                  1
+            124 CALL                     1
+            134 POP_TOP
+
+  5         136 LOAD_GLOBAL              7 (NULL + print)
+            148 LOAD_FAST                0
+            150 PRECALL                  1
+            154 CALL                     1
+            164 POP_TOP
+            166 LOAD_CONST               0 (None)
+            168 RETURN_VALUE
+        >>  170 PUSH_EXC_INFO
+
+  6         172 POP_TOP
+
+  7         174 LOAD_GLOBAL              7 (NULL + print)
+            186 LOAD_CONST               3 ('Woah woah woah, are you trying to reverse me?')
+            188 PRECALL                  1
+            192 CALL                     1
+            202 POP_TOP
+
+  8         204 LOAD_GLOBAL              9 (NULL + __import__)
+            216 LOAD_CONST               4 ('os')
+            218 PRECALL                  1
+            222 CALL                     1
+            232 LOAD_METHOD              5 (_exit)
+            254 LOAD_CONST               5 (1)
+            256 PRECALL                  1
+            260 CALL                     1
+            270 POP_TOP
+            272 POP_EXCEPT
+            274 LOAD_CONST               0 (None)
+            276 RETURN_VALUE
+        >>  278 COPY                     3
+            280 POP_EXCEPT
+            282 RERAISE                  1
+ExceptionTable:
+  4 to 164 -> 170 [0]
+  170 to 270 -> 278 [1] lasti
