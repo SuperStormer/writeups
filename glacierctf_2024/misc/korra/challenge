@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+print("The Avatar is deeper in the ice this time...")
+code = input("input: ").strip()
+whitelist = """abcdef"{>:}"""
+
+if any([x not in whitelist for x in code]):
+    print("Denied!")
+    exit(0)
+
+eval(eval(eval(code, {'globals': {}, '__builtins__': {}}, {}), {'globals': {}, '__builtins__': {}}, {}), {'globals': {}, '__builtins__': {}}, {})
+
+print("The slumber continues...")

