@@ -1,0 +1,6 @@
+-   tarslip to get arbitrary write
+-   https://www.sonarsource.com/blog/pretalx-vulnerabilities-how-to-get-accepted-at-every-conference/#code-execution-via-sitespecific-configuration-hooks to get RCE on server reload
+    -   alternatives:
+        -   `sitecustomize.py`/`usercustomize.py` https://docs.python.org/3/library/site.html#module-sitecustomize
+        -   hook ModuleNotFoundError to find missing imports and overwrite one of those (see [`start.py`](./start.py))
+-   upload a .py file to reload server

